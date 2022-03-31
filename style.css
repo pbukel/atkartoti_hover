@@ -1,0 +1,111 @@
+html{
+    height: 100%;
+}
+body{
+    background: #222222;
+    
+}
+.div1{
+   
+    background-color:transparent;
+    position: relative;
+}
+nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 100px;
+
+}
+
+h2{
+    text-align: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+    color: white;
+    position: relative;
+   
+
+}
+/* h2:hover{
+    transition-delay: 1s;
+} */
+
+.div1::before{
+    position: absolute;
+    top:30%;
+    left: -100%;
+    width: 100%;
+    height: 40%;
+    content: "";
+    color:rgb(128, 11, 11) ;
+    background: rgb(255, 0, 0);
+    opacity: 1;
+    /* z-index:-1; */
+    /* opacity: 0; */
+    transition: 0.5s;
+}
+.div1:hover::before{
+    
+    background: red;
+    /* transform: rotate(90deg) translate(-50px,-50px) scale(2); */
+    transform: translateX(200%);
+    opacity: 1;
+    
+    
+    
+}
+h2::after{
+    /* position: absolute; */
+    /* top: 68%;÷ */
+    position: absolute;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    content: "";
+    color: rgb(219, 37, 37);
+    border-bottom: 2px solid red;
+    transition: 0.3s;
+    /* background: red; */
+    /* border-radius: 100%; */
+    opacity: 1;
+    /* transition: background 0.1s; */
+}
+h2:hover::after{
+    transform: translateX(-100%);
+    opacity: 1;
+}
+    /* transition-delay: 0.1s;
+    background: red;
+    
+} */
+
+.div1::after{
+    /* position: absolute; */
+    top: 0%;
+    position: absolute;
+    right: -300%;
+    width: 300%;
+    height: 100%;
+    content: "";
+    color: rgb(219, 37, 37);
+    transition: 0.3s;
+    background: #222222;
+    /* border-radius: 100%; */
+    opacity: 1;
+    /* transition: background 0.1s; */
+}
+h2::before{
+    position: absolute;
+    /* top:100%; */
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    content: "";
+    color:rgb(128, 11, 11) ;
+    background: #222222;
+    opacity: 1;
+    /* z-index:-1; */
+    /* opacity: 0; */
+    transition: all 0.5s ease-in-out;
+}
